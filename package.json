@@ -1,0 +1,30 @@
+{
+  "name": "panyasendev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viacheslav Kolesnyk",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "popper.js": "^1.14.4"
+  },
+  "dependencies": {
+    "ionicons": "^4.4.6",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1"
+  }
+}

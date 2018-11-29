@@ -1,0 +1,376 @@
+// @media (max-width: 1440px)
+// 	.container
+// 		max-width: 960px
+
+//<1200px
++media-breakpoint-down(lg)
+	#fp-nav.fp-left
+		transform: translate(-380px,-50%)
+	.section-content
+		max-width: 64%
+	.section-content.what-we-do .we-do .column
+		padding: 0 17px
+	.section-content.partners
+		min-width: 62%
+	.section-content.blog .blog-slider .blog-item .image
+		height: 110px
+	.section-content.contact
+		width: 860px
+	.section-content.projects .projects-slider .projects-item img
+		width: 590px
+//<992px
++media-breakpoint-down(md)
+	#fp-nav.fp-left
+		transform: translate(-295px,-50%)
+	.section-content
+		max-width: 62%
+	.section-content.what-we-do
+		.description
+			margin-bottom: 45px
+		.we-do .column
+			margin-top: 25px
+	.section-content.partners .partners-slider
+		.logo-item
+			flex-basis: 50%
+			img
+				margin: auto
+	.section-content.contact
+		width: 690px
+		aside.socials
+			display: none
+		+ footer
+			position: relative
+			.socials
+				display: flex
+				margin: auto
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				a
+					display: flex
+					i
+						margin: auto
+		.ask-quote-wrapper
+			.contact-us-block
+				width: 41%
+			.ask-form-wrapper
+				width: 55%
+			.thanks-form
+				padding: 5px 20px
+			.ask-form .ask-form-footer
+				.captcha
+					width: 210px
+					height: 53px
+				.submit
+					margin-top: 20px
+	.section-content.projects .projects-slider .projects-item
+		img
+			width: 455px
+		.project-info
+			text-align: center
+			.section-title:after
+				left: 50%
+				transform: translateX(-50%)
+			.view-more
+				margin: 0 auto
+	.section-content.careers .career-offers .column
+		margin-bottom: 5px
+	section.project
+		header .ion-android-close
+			transform: translateX(100%)
+
+//<768px
++media-breakpoint-down(sm)
+	.section-content
+		max-width: 100%
+		.section-title
+			margin-bottom: 30px
+		.description
+			margin-bottom: 30px
+	#fp-nav.fp-left
+		display: none!important
+	.section-content.home
+		.socials
+			display: none
+	.section-content.about .clients
+		.title
+			margin-bottom: 15px
+		.column
+			padding: 0 15px
+	.section-content.what-we-do
+		.description
+			margin-bottom: 15px
+		.we-do .column
+			padding: 0 10px
+			margin-top: 15px
+			a
+				margin-bottom: 15px
+	.section-content.testimonials .testimonials-slider .slick-dots
+		bottom: 0
+	.section-content.partners .partners-slider .logo-item
+		img
+			margin: auto
+		&:nth-child(5n+4) img
+			margin: auto
+		&:nth-child(5n+5) img
+			margin: auto
+	.section-content.careers .description
+		margin-bottom: 30px
+	.section-content.blog .blog-slider
+		margin-bottom: 40px
+		.blog-item .image
+			height: 140px
+	.slick-arrow
+		bottom: -60px
+	.section-content.contact
+		width: 100%
+		.ask-quote-wrapper
+			.ask-form
+				textarea
+					height: 3em
+				.ask-form-row
+					flex-direction: column
+					margin-bottom: 0
+					.dropdown-select, input
+						width: 100%
+					input
+						margin-bottom: 10px
+				.ask-form-footer
+					flex-direction: column
+					.captcha
+						width: 100%
+						height: 54px
+						margin-top: 0
+						margin-bottom: 10px
+					.submit
+						margin-top: 0
+			.contact-us-block
+				width: 53%
+			.ask-form-wrapper
+				width: 42%
+			.thanks-form
+				padding: 5px 15px
+				height: 396px
+				overflow-y: overlay
+				.thanks-text
+					font-size: 14px
+					line-height: 17px
+	.section-content.contact.ask-quote
+		.ask-quote-wrapper .ask-form .ask-form-row
+			.dropdown-select, input, textarea
+				width: 100%
+				margin-bottom: 10px
+	.section-content.contact.contact-us .ask-quote-wrapper .ask-form
+		.ask-form-row
+			textarea
+				margin-top: 0
+		.ask-form-row:first-child input
+			width: 100%
+		.ask-form-footer
+			margin-top: 10px
+	.section-content.blog-item
+		.section-title
+			margin-bottom: 30px
+		.image
+			width: 200px
+			height: 150px
+		.date
+			margin-bottom: 10px
+		.share
+			margin-bottom: 10px
+	.section-content.blog-item .text
+		width: 100%
+		max-height: 38vh
+		overflow-y: overlay
+	.section-content.projects .projects-slider
+		margin-bottom: 40px
+		.projects-item
+			flex-direction: column
+			align-items: center
+			img
+				width: 350px
+				margin-bottom: 10px
+			.project-info
+				.web-link
+					margin-bottom: 15px
+	section.project .container .section-content .project-description
+		.line
+			margin: 15px auto
+		p
+			max-width: 80%
+			z-index: 1
+
+//<576px
++media-breakpoint-down(xs)
+	.container
+		padding: 10px
+	.section-content
+		.section-title
+			margin-bottom: 20px
+			font-size: 24px
+		.description
+			margin-bottom: 20px
+			max-height: 110px
+			overflow-y: overlay
+	.slick-arrow
+		bottom: -40px
+	.section-content.home
+		.main-logo
+			width: 90vw
+		.messenger
+			bottom: 14%
+			.chat-offer, .chat
+				width: 90vw
+			.chat-offer .auth
+				.logo
+					margin-left: unset
+				.hello
+					padding: 0
+					margin: auto
+			.chat .room
+				height: 40vh
+		+ footer
+			flex-direction: column
+			.localization, .contacts
+				margin: 0 auto
+			.rights
+				margin: 5px auto
+	.section-content.about .clients
+		.title
+			margin-bottom: 10px
+		.column
+			padding: 0 10px
+			a
+				margin-bottom: 5px
+	.section-content.what-we-do .we-do .column
+		margin-top: 5px
+		a
+			margin-bottom: 5px
+	.section-content.testimonials .testimonials-slider .slick-dots
+		bottom: -15px
+	.section-content.careers .description
+		margin-bottom: 20px
+	.section-content.careers .career-offers
+		.column
+			padding: 0 5px
+			a
+				font-size: 14px
+	.section-content.blog .blog-slider
+		margin-bottom: 20px
+		.blog-item
+			.title
+				margin-bottom: 15px
+			.description
+				margin-bottom: 15px
+				display: none
+	.section-content.contact.contact-us
+		.section-title
+			margin-bottom: 10px
+		.ask-quote-wrapper
+			.ask-form
+				margin-top: 0
+				.ask-form-row
+					flex-direction: row
+					input, textarea
+						width: 48%
+					&:first-child
+						input
+							width: 48%
+					&:nth-child(2)
+						flex-direction: row
+						input
+							margin-right: auto
+							margin-top: auto
+							margin-bottom: 0
+						textarea
+							margin-left: auto
+				.ask-form-footer .captcha
+					height: 76px
+			.thanks-form
+				height: 300px
+		+ footer
+			.socials
+				left: unset
+				right: 0
+				transform: none
+	.section-content.contact.ask-quote
+		.section-title
+			margin-bottom: 10px
+		.ask-quote-wrapper
+			.ask-form
+				margin-top: 0
+				.ask-form-row
+					flex-direction: row
+					.dropdown-select, input
+						width: 48%
+					.dropdown-select
+						.nice-select
+							height: 30px
+							.current
+								display: block
+								margin-top: 3%
+						i
+							top: 51%
+				.ask-form-footer .captcha
+					height: 23.7vw
+			.thanks-form
+				height: 300px
+			.contact-us-block
+				.contact-item:not(:last-child)
+					margin-bottom: 15px
+				a
+					color: #212529
+		+ footer
+			.socials
+				display: none
+			.contact-us
+				font-size: 15px
+				line-height: 21px
+				&:before
+					height: 30px
+					top: -4px
+	.section-content.blog-item
+		.image
+			width: 145px
+			height: 102px
+			margin-right: 10px
+		.share
+			font-size: 14px
+		.icon-wrapper:not(:last-child)
+			margin-right: 5px
+		.text
+			max-height: 36vh
+	.section-content.projects .projects-slider
+		margin-bottom: 15px
+		.projects-item
+			img
+				width: 230px
+			.project-info
+				.section-title
+					font-size: 18px
+					&:after
+						left: 0
+						transform: none
+				.web-link
+					margin-bottom: 5px
+		.slick-arrow
+			bottom: -35px
+	section.project
+		header .ion-android-close
+			transform: translateX(16%)
+		.container
+			height: auto
+			.section-content
+				max-width: 80%
+				.project-description
+					p
+						font-size: 12px
+						max-width: 91%
+					a
+						margin-bottom: 10px
+					.line
+						margin: 10px auto
+						height: 20px
+				.project-image
+					.arrow, .rhombus
+						width: 40px

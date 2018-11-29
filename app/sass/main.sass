@@ -1,0 +1,939 @@
+@import "fonts"
+@import "libs"
+//1300x839
+html
+	overflow-x: hidden
+body
+	overflow-x: hidden
+	display: flex
+	justify-content: center
+input, textarea
+	border-radius: 0
+a:hover
+	text-decoration: none
+.slick-slide:focus, a:focus
+	outline: none
+//custom fullpage dots navigation
+#fp-nav.fp-left
+	display: none
+	left: unset
+	transform: translate(-470px, -50%)
+	padding-top: 0
+	padding-bottom: 0
+	margin: 0!important
+	ul
+		margin: auto 0
+		width: fit-content
+		li
+			width: unset
+			height: unset
+			margin-left: 0
+			a
+				font-family: "MontserratSemiBold", Arial, sans-serif
+				font-size: 12px
+				letter-spacing: -0.25px
+				color: #989898
+				text-transform: uppercase
+				&.active
+					color: #c30000
+		li:first-child
+			display: none
+//end custom fullpage dots navigation
+//custom OverlayScroll scrollbar
+.os-theme-dark>.os-scrollbar-vertical, .os-theme-light>.os-scrollbar-vertical
+	width: 7px
+//end custom OverlayScroll scrollbar
+section, header, footer
+	display: flex
+section
+	position: relative
+	background-size: auto 100%
+	background-repeat: no-repeat
+	background-position: center top
+section.not-full-page
+	height: -webkit-fill-available
+	width: 100vw
+	.container
+		height: auto
+.container
+	padding-top: 46px
+	padding-bottom: 46px
+	height: 100%
+	display: flex
+	flex-direction: column
+	position: relative
+header
+	letter-spacing: 1px
+	position: relative
+	a
+		font-family: "MontserratMedium", Arial, sans-serif
+		font-size: 14px
+		text-transform: uppercase
+		display: inline-block
+		color: #999
+		&:hover
+			cursor: pointer
+			color: #c30000
+	.about
+		margin-right: auto
+	.projects
+		margin-left: auto
+	.logo
+		margin: 0 auto
+		img
+			width: 130px
+	.ion-android-close
+		position: absolute
+		right: 0
+		&:before
+			display: block
+			font-size: 42px
+			line-height: 25px
+			color: #c30000
+
+footer
+	color: #999
+	.localization, .contacts
+		font-family: "MontserratMedium", Arial, sans-serif
+		font-size: 14px
+		text-transform: uppercase
+		color: #999
+	.localization
+		span:not(:last-child)
+			margin-right: 3px
+		span:hover
+			cursor: pointer
+			color: #c30000
+		margin-right: auto
+	.rights
+		font-family: "MontserratRegular", Arial, sans-serif
+		font-size: 12px
+		letter-spacing: 0.3px
+		margin: 0 auto
+	.contacts
+		letter-spacing: 1px
+		margin-left: auto
+		&:hover
+			cursor: pointer
+			color: #c30000
+	.contact-us
+		font-family: "MontserratSemiBold", Arial, sans-serif
+		font-size: 17px
+		text-transform: uppercase
+		color: #ffffff
+		position: relative
+		z-index: 0
+		&:before
+			content: ""
+			background-color: #c30000
+			position: absolute
+			left: -25px
+			top: -8px
+			z-index: -1
+			height: 40px
+			width: 300px
+	.socials
+		display: none
+		a
+			color: #000
+			.fab
+				font-size: 17px
+			.ion-social-instagram-outline
+				font-size: 22px
+				line-height: 22px
+			i
+				display: block
+			&:not(:last-child)
+				margin-right: 24px
+			i:hover
+				color: #c30000
+
+.section-content
+	margin: auto
+	max-width: 68%
+	text-align: center
+	.section-title
+		font-family: "MontserratExtraBold", Arial, sans-serif
+		font-size: 35px
+		position: relative
+		text-transform: uppercase
+		width: fit-content
+		margin: 0 auto
+		margin-bottom: 60px
+		color: #292929
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 80px
+			border: 2px solid #c30000
+	.description
+		font-family: "MontserratLight", Arial, sans-serif
+		font-size: 14px
+		line-height: normal
+		color: #656565
+		margin-bottom: 70px
+	.socials
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		display: flex
+		flex-direction: column
+		a
+			color: #000
+			.fab
+				font-size: 17px
+			.ion-social-instagram-outline
+				font-size: 22px
+				line-height: 22px
+			i
+				display: block
+			&:not(:last-child)
+				margin-bottom: 24px
+			i:hover
+				color: #c30000
+
+.slick-arrow
+	position: absolute
+	bottom: -135px
+	&.slider-arrow-prev
+		transform: translateX(-140%)
+	&.slider-arrow-next
+		transform: translateX(40%)
+	&.slick-disabled
+		opacity: 0.5
+	&:not(.slick-disabled):hover
+		cursor: pointer
+.slider-paging
+	font-family: "MontserratMedium", Arial, sans-serif
+	font-size: 24px
+
+.section-content.home
+	font-family: "MontserratSemiBold", Arial, sans-serif
+	text-transform: uppercase
+	text-align: center
+	.main-logo
+		width: 440px
+		margin-bottom: 25px
+	.agency
+		font-size: 18px
+		letter-spacing: 1.3px
+		color: #202020
+		margin-bottom: 0
+	.messenger
+		position: absolute
+		right: 0
+		bottom: 12%
+		font-size: 34px
+		right: 15px
+		text-transform: none
+		i
+			display: block
+		.fa-facebook-messenger:hover
+			cursor: pointer
+		.chat-offer
+			box-shadow: -5px 5px 10px #f8f8f8
+			background-color: #f8f8f8
+			color: #202020
+			margin-bottom: 20px
+			width: 363px
+			display: none
+			.auth
+				border-bottom: 1px solid #999999
+				padding: 5px 17px 0 17px
+				.ion-close-round
+					font-size: 21px
+					color: #ca2020
+					height: fit-content
+					&:hover
+						cursor: pointer
+				.hello
+					padding: 0 0 6px 21px
+					p
+						font-family: "SegoeUISemiBold", Arial, sans-serif
+						font-size: 16px
+						margin-bottom: 16px
+					.user
+						.avatar
+							width: 25px
+							height: 25px
+							border-radius: 50px
+							display: inline-block
+							margin-right: 2px
+						span
+							font-family: "SegoeUISemiLight", Arial, sans-serif
+							font-size: 15px
+							color: #999999
+							a
+								color: #999999
+								text-decoration: underline
+				.logo
+					width: 36px
+					height: 36px
+					margin-top: 6px
+					margin-left: auto
+			.chat-now
+				font-family: "SegoeUISemiBold", Arial, sans-serif
+				font-size: 18px
+				letter-spacing: 0.5px
+				padding: 11px 0
+				&:hover
+					cursor: pointer
+		.chat
+			box-shadow: -5px 5px 10px #f8f8f8
+			background-color: #f8f8f8
+			width: 363px
+			margin-bottom: 20px
+			display: none
+			.chat-header, .chat-footer
+				padding: 0 15px
+			.chat-header
+				padding-bottom: 5px
+				.ion-close-round
+					font-size: 21px
+					line-height: normal
+					color: #ca2020
+					position: absolute
+					top: 5px
+					&:hover
+						cursor: pointer
+				.user-name
+					font-family: "SegoeUISemiBold", Arial, sans-serif
+					font-size: 16px
+					color: #292929
+					line-height: normal
+					margin-bottom: 0
+				.user-description
+					font-family: "SegoeUISemiLight", Arial, sans-serif
+					font-size: 12px
+					color: #999999
+					display: block
+					line-height: normal
+			.room
+				border-top: 1px solid #292929
+				border-bottom: 1px solid #292929
+				height: 385px
+				overflow-y: overlay
+				.message-container
+					padding-top: 5px
+					padding-bottom: 5px
+					.time-sent, .seen
+						font-family: "SegoeUISemiLight", Arial, sans-serif
+						font-size: 14px
+						color: #999999
+					.time-sent
+						margin-bottom: 10px
+					.message-content, .seen
+						padding-left: 50px
+						padding-right: 25px
+					.seen
+						text-align: left
+						margin-bottom: 0
+					.message-content
+						width: 100%
+						display: flex
+						margin-bottom: 5px
+						.message
+							font-family: "SegoeUI", Arial, sans-serif
+							font-size: 16px
+							border-radius: 50px
+							padding: 5px 15px
+							padding-bottom: 7px
+							line-height: normal
+					&.support
+						.message-content
+							position: relative
+							.message
+								background-color: #ffffff
+								color: #202020
+								text-align: left
+							.logo-big, .logo-small
+								position: absolute
+								bottom: 0
+							.logo-big
+								width: 20px
+								height: 20px
+								left: 15px
+							.logo-small
+								width: 10px
+								height: 10px
+								right: 10px
+					&.customer
+						.message-content
+							.message
+								background-color: #282828
+								color: #ffffff
+								margin-left: auto
+			.chat-footer
+				padding: 12px 15px
+				input
+					font-family: "SegoeUI", Arial, sans-serif
+					font-size: 16px
+					color: #202020
+					background-color: #f8f8f8
+					width: 92%
+					border: none
+					&:focus
+						outline: none
+				img
+					width: 17px
+					height: 17px
+
+.section-content.about
+	.clients
+		.title
+			font-family: "MontserratMedium", Arial, sans-serif
+			font-size: 18px
+			color: #292929
+			margin-bottom: 30px
+		.column
+			display: inline-block
+			padding: 0 25px
+			a
+				font-family: "MontserratLight", Arial, sans-serif
+				font-size: 14px
+				color: #656565
+				text-decoration: none
+				display: block
+				margin-bottom: 10px
+				&:hover
+					text-decoration: underline
+
+.section-content.what-we-do
+	.we-do
+		.column
+			display: inline-block
+			padding: 0 22px
+			a
+				font-family: "MontserratMedium", Arial, sans-serif
+				font-size: 16px
+				color: #292929
+				text-decoration: none
+				display: block
+				margin-bottom: 25px
+				letter-spacing: -0.2px
+				&:last-child
+					margin-bottom: 0
+.section-content.testimonials
+	.testimonials-slider
+		.person
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: 25px
+			.avatar
+				background-size: cover
+				background-position: center
+				background-repeat: no-repeat
+				width: 100px
+				height: 105px
+				margin-right: 20px
+			.info
+				text-align: left
+				p
+					font-family: "MontserratLight", Arial, sans-serif
+					font-size: 14px
+					width: fit-content
+				.name
+					text-transform: uppercase
+					margin-bottom: 10px
+				.position
+					margin-bottom: 0
+		.slick-dots
+			bottom: 16px
+			li
+				button:before
+					font-family: "Ionicons"
+					font-size: 20px
+					content: '\f24f'
+					color: #b3b3b3
+				&.slick-active
+					button:before
+						color: #c30000
+.section-content.partners
+	min-width: 675px
+	.partners-slider
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 10px
+		flex-wrap: wrap
+		.logo-item
+			flex: 1 0 33%
+			display: flex
+			img
+				height: auto
+				margin: auto
+			&:nth-child(5n + 4)
+				flex-basis: 50%
+				img
+					margin-right: 15%
+			&:nth-child(5n + 5)
+				flex-basis: 50%
+				img
+					margin-left: 15%
+		&.double-logo
+			.logo-item
+				padding: 0 48px
+				margin: 0
+.section-content.careers
+	.description
+		margin-bottom: 50px
+	.career-offers
+		.column
+			display: inline-block
+			padding: 0px 30px
+			a
+				font-family: "MontserratMedium", Arial, sans-serif
+				font-size: 18px
+				color: #292929
+				text-decoration: none
+				display: block
+				margin-bottom: 5px
+				letter-spacing: -0.2px
+				&:last-child
+					margin-bottom: 0
+.section-content.blog
+	.blog-slider
+		width: 100%
+		margin-bottom: 115px
+		.blog-item
+			width: 90%
+			display: flex
+			flex-direction: column
+			margin: 0 auto
+			text-align: left
+			.image
+				background-size: cover
+				background-position: center
+				background-repeat: no-repeat
+				height: 155px
+				width: 100%
+				margin-bottom: 15px
+			.title
+				font-family: "MontserratExtraBold", Arial, sans-serif
+				font-size: 14px
+				line-height: normal
+				position: relative
+				color: #292929
+				margin-bottom: 20px
+				&:after
+					content: ""
+					position: absolute
+					left: 0
+					bottom: -5px
+					width: 80px
+					border: 2px solid #c30000
+			.description
+				font-family: "SegoeUI", Arial, sans-serif
+				font-size: 15px
+				line-height: 18px
+				letter-spacing: -0.35px
+				color: #999999
+				margin-bottom: 20px
+			.read-more
+				font-family: "SegoeUI", Arial, sans-serif
+				font-size: 12px
+				text-transform: uppercase
+				color: #ffffff
+				background-color: #c30000
+				padding: 7px 7px
+				width: fit-content
+.section-content.contact
+	max-width: unset
+	width: 995px
+	.ask-quote-wrapper
+		display: flex
+		width: 100%
+		.ask-form-wrapper
+			width: 57%
+		.ask-form
+			margin-top: 20px
+			.ask-form-row
+				display: flex
+				margin-bottom: 35px
+				.form-item:nth-child(2n + 1)
+					margin-right: auto
+				.form-item:nth-child(2n + 2)
+					margin-left: auto
+				&:nth-child(4)
+					margin-bottom: 0
+			.ask-form-footer
+				display: flex
+				.captcha
+					width: 255px
+					height: 65px
+					margin-top: 15px
+					margin-right: auto
+					background-size: cover
+				.submit
+					font-family: "SegoeUISemiBold", Arial, sans-serif
+					font-size: 18px
+					text-transform: uppercase
+					color: #ffffff
+					background-color: #c30000
+					height: fit-content
+					padding: 10px 45px
+					margin-top: 30px
+			input, textarea
+				&:focus
+					border-color: #292929
+			input, textarea, .dropdown-select .nice-select
+				font-family: "SegoeUISemiLight", Arial, sans-serif
+				font-size: 15px
+				color: #292929
+				border: none
+				border-bottom: 1px solid #999999
+				&:placeholder
+					color: #999999
+				&:focus
+					outline: none
+			textarea
+				width: 100%
+				resize: none
+		.thanks-form
+			background-color: #f8f8f8
+			padding: 5px 60px
+			position: relative
+			box-shadow: -5px 5px 10px #f8f8f8
+			.ion-android-close
+				position: absolute
+				left: 20px
+				top: 5px
+				font-size: 28px
+				line-height: 28px
+				color: #c30000
+				&:hover
+					cursor: pointer
+			.section-title
+				font-size: 24px
+				text-transform: none
+				margin-bottom: 25px
+				&:after
+					bottom: -3px
+			.thanks-text
+				font-family: "SegoeUI", Arial, sans-serif
+				font-size: 16px
+				line-height: 19px
+				letter-spacing: 0.5px
+				color: #202020
+				text-align: left
+				a
+					color: #c30000
+					text-decoration: underline
+			.thanks-team
+				font-family: "SegoeUISemiBold", Arial, sans-serif
+				font-size: 16px
+				letter-spacing: 0.5px
+				text-align: left
+				margin-bottom: 35px
+		.contact-us-block
+			width: 30%
+			margin-left: auto
+.section-content.contact.ask-quote
+	.ask-quote-wrapper
+		.ask-form
+			.ask-form-row
+				input, .dropdown-select
+					width: 48%
+				.dropdown-select
+					display: inline-block
+					position: relative
+					.nice-select
+						width: 100%
+						border-radius: 0
+						padding-left: 0
+						height: 25px
+						line-height: 22.5px
+						padding-top: 1px
+						.list
+							width: 100%
+							border: none
+							border-radius: 0
+							margin-top: 2px
+							.option
+								outline: none
+								border: none
+								color: #292929
+								padding: 0 10px
+								&:nth-child(2n + 1)
+									background-color: #ebebeb
+								&:nth-child(2n + 2)
+									background-color: #f8f8f8
+								&.selected
+									font-weight: normal
+							&:hover
+								.option:not(:hover)
+									&:nth-child(2n + 1)
+										background-color: #ebebeb!important
+									&:nth-child(2n + 2)
+										background-color: #f8f8f8!important
+						&:after
+							display: none
+					i
+						position: absolute
+						right: 10px
+						top: 44%
+						font-size: 10px
+						line-height: 6px
+						color: #292929
+						&.fa-sort-up
+							transform: translateY(-50%)
+						&.fa-sort-down
+		.contact-us-block
+			.title
+				font-family: "SegoeUIBold", Arial, sans-serif
+				font-size: 18px
+				letter-spacing: 0.5px
+				text-transform: uppercase
+				color: #292929
+				background-color: #ececec
+				text-align: left
+				padding: 10px 0
+				padding-left: 20px
+				margin-bottom: 10px
+			.contact-item
+				display: flex
+				text-align: left
+				&:not(:last-child)
+					margin-bottom: 25px
+				.icon-wrapper
+					display: inline-block
+					width: 35px
+					height: 35px
+					border-radius: 50px
+					background-color: #292929
+					text-align: center
+					margin: auto 0
+					margin-right: 20px
+					i
+						color: white
+						font-size: 14px
+						line-height: 34px
+						&.ion-ios-clock-outline
+							transform: scaleX(-1)
+							font-weight: 600
+						&.ion-ios-clock-outline, &.fa-skype
+							font-size: 18px
+				.contact-text
+					font-family: "SegoeUISemiLight", Arial, sans-serif
+					font-size: 15px
+					letter-spacing: 0.3px
+					line-height: 18px
+					display: inline-block
+					margin: auto 0
+					&.web-link
+						text-decoration: underline
+.section-content.blog-item
+	max-width: 855px
+	text-align: left
+	.section-title
+		font-size: 14px
+		letter-spacing: -0.15px
+		text-transform: none
+		margin-bottom: 50px
+		&:after
+			bottom: -8px
+	.image
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		width: 230px
+		height: 180px
+		float: left
+		margin-right: 30px
+		margin-bottom: 20px
+	.text
+		font-family: "MontserratLight", Arial, sans-serif
+		font-size: 14px
+		line-height: 17px
+		color: #656565
+		margin-bottom: 10px
+	.date
+		font-family: "MontserratMedium", Arial, sans-serif
+		font-size: 14px
+		color: #515151
+		margin-bottom: 20px
+	.share
+		font-family: "SegoeUIBold", Arial, sans-serif
+		font-size: 18px
+		letter-spacing: 0.5px
+		text-transform: uppercase
+		margin-bottom: 15px
+	.icon-wrapper
+		width: 40px
+		height: 40px
+		color: #282828
+		background-color: #ececec
+		display: inline-flex
+		i
+			font-size: 14px
+			margin: auto
+		&:not(:last-child)
+			margin-right: 15px
+		&:hover
+			color: white
+			background-color: #282828
+.section-content.contact.contact-us
+	.ask-quote-wrapper
+		.ask-form
+			.ask-form-row
+				input
+					width: 100%
+				textarea
+					margin-top: 35px
+				&:first-child
+					input
+						width: 48%
+				.attach-file-wrapper
+					font-family: "SegoeUI", Arial, sans-serif
+					font-size: 14px
+					color: #777777
+					background-color: #cccccc
+					padding: 10px 35px
+					display: flex
+					img
+						width: 15px
+						height: 15px
+						margin: auto 0
+						margin-right: 5px
+				&:nth-child(2)
+					flex-direction: column
+					margin-bottom: 0
+				&:nth-child(3)
+					margin-top: 10px
+					margin-bottom: 0
+		.contact-us-block
+			.country-item
+				text-align: center
+				.title
+					font-family: "SegoeUIBold", Arial, sans-serif
+					font-size: 18px
+					text-transform: uppercase
+					color: #292929
+					background-color: #ececec
+					padding: 5px 0
+				.address
+					font-family: "SegoeUISemiLight", Arial, sans-serif
+					font-size: 15px
+					letter-spacing: 0.4px
+					color: #565656
+					height: 0
+					opacity: 0
+					transition: all 0.2s linear
+					margin-bottom: 0
+				&.active
+					.address
+						height: 60px
+						opacity: 1
+				&:last-child
+					margin-bottom: 0
+.section-content.projects
+	max-width: 980px
+	width: 100%
+	.projects-slider
+		margin-bottom: 115px
+		.projects-item
+			display: flex
+			img
+				width: 625px
+				height: 100%
+			.project-info
+				margin: auto
+				text-align: left
+				.section-title
+					font-size: 24px
+					margin-bottom: 15px
+					letter-spacing: -0.7px
+				.description, .web-link
+					font-family: "SegoeUI", Arial, sans-serif
+					font-size: 15px
+				.description
+					letter-spacing: -0.3px
+					color: #999999
+					margin-bottom: 5px
+				.web-link
+					color: #c30000
+					display: block
+					margin-bottom: 35px
+				.view-more
+					font-family: "SegoeUI", Arial, sans-serif
+					font-size: 12px
+					text-transform: uppercase
+					color: #ffffff
+					background-color: #c30000
+					padding: 6px 8px
+					display: block
+					width: fit-content
+section.project
+	width: 100vw
+	.container	
+		height: 100vh
+		padding-top: 0
+		padding-bottom: 0
+		display: flex
+		header
+			position: relative
+			top: 46px
+		.section-content
+			margin: 0 auto
+			height: 100%
+			max-width: 92%
+			display: flex
+			flex-direction: column
+			background-color: white
+			box-shadow: 0 0 31px 4px grey
+			.project-image
+				position: relative
+				.main-image
+					width: 100%
+				.rhombus
+					position: absolute
+					top: 52%
+					width: 75px
+					right: 12%
+				.arrow
+					position: absolute
+					bottom: -15%
+					left: 13%
+					width: 70px
+			.project-description
+				position: relative
+				display: flex
+				flex-direction: column
+				margin-top: auto
+				.rhombus
+					position: absolute
+					bottom: 72%
+					left: 11%
+					width: 35px
+				.arrow
+					position: absolute
+					bottom: 90%
+					right: 9%
+					width: 30px
+				p
+					font-family: "MontserratBold", Arial, sans-serif
+					font-size: 14px
+					margin: auto
+					margin-bottom: 0
+					max-width: 55%
+					text-align: center
+				.line
+					background-color: #a520dd
+					height: 30px
+					width: 1px
+					margin: 30px auto
+				a
+					font-family: "MontserratBold", Arial, sans-serif
+					font-size: 10px
+					margin: 0 auto
+					margin-bottom: 30px
+					color: white
+					background-color: #6e0c9d
+					padding: 10px
+					border-radius: 3px
+@import "media" // Always at the end
