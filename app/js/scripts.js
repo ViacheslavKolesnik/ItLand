@@ -18,7 +18,10 @@ $(function () {
 		onLeave: function(origin, destination, direction){
 			if(destination.anchor == "home" || destination.anchor == "ask-for-free-quote"){
 				$("#fp-nav").hide();
-			} else {
+			}
+		},
+		afterLoad: function(origin, destination, direction){
+			if(origin.anchor == "home" || origin.anchor == "ask-for-free-quote"){
 				$("#fp-nav").show();
 				$("#fp-nav").css('display', 'flex');
 			}
