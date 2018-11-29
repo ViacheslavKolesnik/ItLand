@@ -156,19 +156,5 @@ $(function () {
 	if($(window).width() < 768) {
 		$('.section-content.blog-item').append($('.section-content.blog-item .text'));
 	}
-	$('#denis-input').change(function(){
-		var input = $(this).val();
-		var output = '';
-		var counter = 1;
-		for (var i = 0; i < input.length; i++) {
-			if ( input.charAt(i) == input.charAt(i+1) ) {
-				counter++;
-				continue;
-			}
-			output += counter == 1 ? input.charAt(i) : counter + input.charAt(i-1);
-			counter = 1;
-		}
-		$('#denis-output').text(output);
-	});
 	//end functions
 });
