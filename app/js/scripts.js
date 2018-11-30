@@ -19,11 +19,32 @@ $(function () {
 			if(destination.anchor == "home" || destination.anchor == "ask-for-free-quote"){
 				$("#fp-nav").hide();
 			}
+			if(origin.anchor == "home"){
+				$('.fullpage-nav-arrow.up').show();
+				$(".messenger .chat").hide();
+				$(".messenger .chat-offer").hide();
+				$(".messenger .fa-facebook-messenger").removeClass("click-disabled");
+			}
+			if(origin.anchor == "ask-for-free-quote"){
+				$('.fullpage-nav-arrow.down').show();
+			}
+			if(destination.anchor == "home"){
+				$('.fullpage-nav-arrow.up').hide();
+			}
+			if(destination.anchor == "ask-for-free-quote"){
+				$('.fullpage-nav-arrow.down').hide();
+			}
 		},
 		afterLoad: function(origin, destination, direction){
 			if(origin && (origin.anchor == "home" || origin.anchor == "ask-for-free-quote") ){
 				$("#fp-nav").show();
 				$("#fp-nav").css('display', 'flex');
+			}
+			if(destination.anchor == "home"){
+				$('.fullpage-nav-arrow.up').hide();
+			}
+			if(destination.anchor == "ask-for-free-quote"){
+				$('.fullpage-nav-arrow.down').hide();
 			}
 		}
 	});
@@ -34,6 +55,15 @@ $(function () {
 			$(element).html(title);
 		});
 		//custom navigation dots end
+
+		//arrows navigation
+		$('.fullpage-nav-arrow.up').click(function(){
+			fullpage_api.moveSectionUp();
+		});
+		$('.fullpage-nav-arrow.down').click(function(){
+			fullpage_api.moveSectionDown();
+		});
+		//end arrows navigation
 
 	//full page end
 

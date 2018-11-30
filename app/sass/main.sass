@@ -39,6 +39,25 @@ a:hover
 		li:first-child
 			display: none
 //end custom fullpage dots navigation
+//nav arrows for fullpage
+.fullpage-nav-arrow
+	position: fixed
+	transform: translateX(577px)
+	font-size: 100px
+	color: #c30000
+	&:hover
+		color: #c30000
+		cursor: pointer
+	&.up
+		top: 190px
+	&.down
+		bottom: 190px
+	i
+		display: block
+		line-height: 60px
+		&:before
+			line-height: 65px
+//end nav arrows for fullpage
 //custom OverlayScroll scrollbar
 .os-theme-dark>.os-scrollbar-vertical, .os-theme-light>.os-scrollbar-vertical
 	width: 7px
@@ -51,8 +70,8 @@ section
 	background-repeat: no-repeat
 	background-position: center top
 section.not-full-page
-	height: -webkit-fill-available
 	width: 100vw
+	min-height: 100vh
 	.container
 		height: auto
 .container
@@ -159,7 +178,7 @@ footer
 		text-transform: uppercase
 		width: fit-content
 		margin: 0 auto
-		margin-bottom: 60px
+		margin-bottom: 50px
 		color: #292929
 		&:after
 			content: ""
@@ -198,7 +217,7 @@ footer
 
 .slick-arrow
 	position: absolute
-	bottom: -135px
+	bottom: -70px
 	&.slider-arrow-prev
 		transform: translateX(-140%)
 	&.slider-arrow-next
@@ -499,7 +518,7 @@ footer
 .section-content.blog
 	.blog-slider
 		width: 100%
-		margin-bottom: 115px
+		margin-bottom: 50px
 		.blog-item
 			width: 90%
 			display: flex
@@ -835,7 +854,7 @@ footer
 	max-width: 980px
 	width: 100%
 	.projects-slider
-		margin-bottom: 115px
+		margin-bottom: 50px
 		.projects-item
 			display: flex
 			img
@@ -870,8 +889,7 @@ footer
 					width: fit-content
 section.project
 	width: 100vw
-	.container	
-		height: 100vh
+	.container
 		padding-top: 0
 		padding-bottom: 0
 		display: flex
@@ -912,13 +930,14 @@ section.project
 					width: 35px
 				.arrow
 					position: absolute
-					bottom: 90%
+					bottom: 82%
 					right: 9%
 					width: 30px
 				p
 					font-family: "MontserratBold", Arial, sans-serif
 					font-size: 14px
 					margin: auto
+					margin-top: 30px
 					margin-bottom: 0
 					max-width: 55%
 					text-align: center
